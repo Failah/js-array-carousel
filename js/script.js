@@ -56,11 +56,12 @@ for (let i = 0; i < images.length; i++) {
 }
 
 
-//DOWN BUTTON SCRIPT
+//DEFINING BUTTONS VARIABLES
 const previousButton = document.getElementById('previous');
-
 const nextButton = document.getElementById('next');
 
+
+//DOWN BUTTON SCRIPT
 nextButton.addEventListener('click',
     function () {
         console.log('DOWN ARROW CLICKED');
@@ -69,12 +70,24 @@ nextButton.addEventListener('click',
             carImg.innerHTML = '';
             activeIndex++;
 
-            for (let i = 0; i < images.length; i++) {
+
+
+            let counter;
+            let i;
+            for (i = 0; i < images.length; i++) {
+                counter = i + 1;
                 const image = images[i];
-                const imageClass = i === activeIndex ? 'item active' : 'none'
+                const imageClass = i === activeIndex ? 'active' : 'none'
 
                 carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
 
+                console.log('i=', i);
+                console.log('counter=', counter);
+            }
+
+            if (counter == 5) {
+                carImg.innerHTML += 'TEST';
+                i = 0;
             }
         }
     }
@@ -95,7 +108,6 @@ previousButton.addEventListener('click',
                 const imageClass = i === activeIndex ? 'active' : 'none'
 
                 carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
-
             }
         }
     }
