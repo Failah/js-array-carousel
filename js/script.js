@@ -56,14 +56,14 @@ for (let i = 0; i < images.length; i++) {
 }
 
 
-//UPPER BUTTON SCRIPT
+//DOWN BUTTON SCRIPT
 const previousButton = document.getElementById('previous');
 
 const nextButton = document.getElementById('next');
 
 nextButton.addEventListener('click',
     function () {
-        console.log('mi hai cliccato!');
+        console.log('DOWN ARROW CLICKED');
 
         if (activeIndex < images.length - 1) {
             carImg.innerHTML = '';
@@ -76,17 +76,15 @@ nextButton.addEventListener('click',
                 carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
 
             }
-
         }
-
     }
 );
 
 
-//DOWN BUTTON SCRIPT
+//UP BUTTON SCRIPT
 previousButton.addEventListener('click',
     function () {
-        console.log('mi hai cliccato!');
+        console.log('UP ARROW CLICKED');
 
         if (activeIndex > 0) {
             carImg.innerHTML = '';
@@ -99,7 +97,6 @@ previousButton.addEventListener('click',
                 carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
 
             }
-
         }
     }
 );
