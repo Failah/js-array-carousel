@@ -37,3 +37,69 @@ console.log('JS OK!');
 // cambio di miniatura attiva.
 
 
+//CAROUSEL SCRIPT
+const images = ['01', '02', '03', '04', '05'];
+
+let activeIndex = 0;
+
+const carImg = document.getElementById('car-img');
+
+for (let i = 0; i < images.length; i++) {
+    const image = images[i];
+    const imageClass = i === activeIndex ? 'active' : 'none'
+
+    carImg.innerHTML += `<img
+                                class="${imageClass}"
+                                src="img/${image}.jpg" alt="${image}" 
+                            />`
+
+}
+
+
+//UPPER BUTTON SCRIPT
+const previousButton = document.getElementById('previous');
+
+const nextButton = document.getElementById('next');
+
+nextButton.addEventListener('click',
+    function () {
+        console.log('mi hai cliccato!');
+
+        if (activeIndex < images.length - 1) {
+            carImg.innerHTML = '';
+            activeIndex++;
+
+            for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                const imageClass = i === activeIndex ? 'item active' : 'none'
+
+                carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
+
+            }
+
+        }
+
+    }
+);
+
+
+//DOWN BUTTON SCRIPT
+previousButton.addEventListener('click',
+    function () {
+        console.log('mi hai cliccato!');
+
+        if (activeIndex > 0) {
+            carImg.innerHTML = '';
+            activeIndex--;
+
+            for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                const imageClass = i === activeIndex ? 'active' : 'none'
+
+                carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
+
+            }
+
+        }
+    }
+);

@@ -40,6 +40,14 @@ body {
     justify-content: space-between;
 }
 
+.active {
+    display: inline-block;
+}
+
+.none {
+    display: none;
+}
+
 
 /* contents */
 
@@ -80,6 +88,7 @@ body {
     border-radius: 50%;
     background-color: bisque;
     opacity: 75%;
+    user-select: none;
 }
 
 
