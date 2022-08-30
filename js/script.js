@@ -46,12 +46,12 @@ const carImg = document.getElementById('car-img');
 
 for (let i = 0; i < images.length; i++) {
     const image = images[i];
-    const imageClass = i === activeIndex ? 'active' : 'none'
+    const imageClass = i === activeIndex ? 'active' : 'none';
 
     carImg.innerHTML += `<img
                                 class="${imageClass}"
                                 src="img/${image}.jpg" alt="${image}" 
-                            />`
+                            />`;
 
 }
 
@@ -69,13 +69,20 @@ nextButton.addEventListener('click',
         if (activeIndex < images.length - 1) {
             carImg.innerHTML = '';
             activeIndex++;
+        } else {
+            activeIndex = 0;
+        }
 
-            for (let i = 0; i < images.length; i++) {
-                const image = images[i];
-                const imageClass = i === activeIndex ? 'active' : 'none'
+        carImg.innerHTML = '';
 
-                carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
-            }
+        for (let i = 0; i < images.length; i++) {
+            const image = images[i];
+            const imageClass = i === activeIndex ? 'active' : 'none';
+
+            carImg.innerHTML += `<img
+            class="${imageClass}"
+            src="img/${image}.jpg" alt="${image}" 
+        />`;
         }
     }
 );
@@ -87,15 +94,21 @@ previousButton.addEventListener('click',
         console.log('UP ARROW CLICKED');
 
         if (activeIndex > 0) {
-            carImg.innerHTML = '';
             activeIndex--;
+        } else {
+            activeIndex = images.lenght - 1;
+        }
 
-            for (let i = 0; i < images.length; i++) {
-                const image = images[i];
-                const imageClass = i === activeIndex ? 'active' : 'none'
+        carImg.innerHTML = '';
 
-                carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
-            }
+        for (let i = 0; i < images.length; i++) {
+            const image = images[i];
+            const imageClass = i === activeIndex ? 'active' : 'none';
+
+            carImg.innerHTML += `<img
+            class="${imageClass}"
+            src="img/${image}.jpg" alt="${image}" 
+        />`;
         }
     }
 );
