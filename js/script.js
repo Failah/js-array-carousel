@@ -96,7 +96,7 @@ previousButton.addEventListener('click',
         if (activeIndex > 0) {
             activeIndex--;
         } else {
-            activeIndex = images.lenght - 1;
+            activeIndex = images.length - 1;
         }
 
         carImg.innerHTML = '';
