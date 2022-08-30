@@ -37,7 +37,7 @@ console.log('JS OK!');
 // cambio di miniatura attiva.
 
 
-//CAROUSEL SCRIPT
+// CAROUSEL SCRIPT
 const images = ['01', '02', '03', '04', '05'];
 
 let activeIndex = 0;
@@ -56,12 +56,12 @@ for (let i = 0; i < images.length; i++) {
 }
 
 
-//DEFINING BUTTONS VARIABLES
+// DEFINING BUTTONS VARIABLES
 const previousButton = document.getElementById('previous');
 const nextButton = document.getElementById('next');
 
 
-//DOWN BUTTON SCRIPT
+// DOWN BUTTON SCRIPT
 nextButton.addEventListener('click',
     function () {
         console.log('DOWN ARROW CLICKED');
@@ -88,7 +88,7 @@ nextButton.addEventListener('click',
 );
 
 
-//UP BUTTON SCRIPT
+// UP BUTTON SCRIPT
 previousButton.addEventListener('click',
     function () {
         console.log('UP ARROW CLICKED');
