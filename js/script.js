@@ -70,24 +70,11 @@ nextButton.addEventListener('click',
             carImg.innerHTML = '';
             activeIndex++;
 
-
-
-            let counter;
-            let i;
-            for (i = 0; i < images.length; i++) {
-                counter = i + 1;
+            for (let i = 0; i < images.length; i++) {
                 const image = images[i];
                 const imageClass = i === activeIndex ? 'active' : 'none'
 
                 carImg.innerHTML += '<img class="' + imageClass + '" src="img/' + image + '.jpg" />'
-
-                console.log('i=', i);
-                console.log('counter=', counter);
-            }
-
-            if (counter == 5) {
-                carImg.innerHTML += 'TEST';
-                i = 0;
             }
         }
     }

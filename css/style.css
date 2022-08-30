@@ -48,6 +48,14 @@ body {
     display: none;
 }
 
+.opacity-up {
+    opacity: 50%;
+}
+
+.opacity-down {
+    opacity: 100%;
+}
+
 
 /* contents */
 
@@ -87,7 +95,6 @@ body {
     padding: 3px;
     border-radius: 50%;
     background-color: bisque;
-    opacity: 75%;
     user-select: none;
 }
 
